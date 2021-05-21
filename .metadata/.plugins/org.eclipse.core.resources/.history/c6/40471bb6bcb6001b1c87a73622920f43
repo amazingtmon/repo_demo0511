@@ -1,0 +1,20 @@
+package com.example.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Service;
+
+@Service
+public class DeptLogic {
+	Logger logger = LogManager.getLogger(RestDeptController.class);
+	public List<Map<String,Object>> jasonDeptList() {
+		logger.info("jasonDeptList 호출 성공");
+		List<Map<String,Object>> deptList = null;
+		deptList = new ArrayList<>();
+		return deptList;
+	}
+}

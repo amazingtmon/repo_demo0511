@@ -1,0 +1,22 @@
+package design.duck;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class DuckSimulation {
+
+	public static void main(String[] args) {
+		ApplicationContext context = 
+				new ClassPathXmlApplicationContext("design\\duck\\duckBean.xml");
+		
+		Duck myDuck = null;
+		myDuck = (Duck) context.getBean("myDuck");
+		myDuck.performFly();
+		myDuck.swimming();
+		
+		myDuck = null;
+		myDuck = new RubberDuck();
+		myDuck.performFly();
+	}
+
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo">
+	
+		<select id="entireList" parameterType="com.zipcode.ZipCodeVO" resultType="map">
+                  select zipcode, address from zip_code
+		</select>
+
+	<select id="getSIGUList" parameterType="com.zipcode.ZipCodeVO" resultType="com.zipcode.ZipCodeVO">
+				SELECT '전체' sigu FROM dual     
+				UNION ALL                        
+				SELECT sigu                      
+				  FROM (                         
+				        SELECT distinct(sigu) sigu 
+				          FROM zipcode_t     
+				         WHERE zdo=#{zdo}     
+				        ORDER BY sigu asc    
+				       )                     
+	</select>
+
+	<select id="getDONGList" parameterType="com.zipcode.ZipCodeVO" resultType="java.lang.String">
+				SELECT '전체' dong FROM dual    
+				UNION ALL                       
+				SELECT dong                     
+				  FROM (                        
+				        SELECT distinct(dong) dong 
+				          FROM zipcode_t     
+				         WHERE sigu=#{sigu}        
+				        ORDER BY dong asc    
+				       )                                      
+	</select>
+
+	<select id="getZDOList" parameterType="java.util.Map" resultType="java.util.Map">
+				SELECT '전체' ZDO FROM DUAL 
+				UNION ALL
+				SELECT ZDO 
+				  FROM ( 
+				        SELECT DISTINCT(ZDO) ZDO + 
+				          FROM zip_code + 
+				         ORDER BY ZDO ASC + 
+				        )
+	</select>
+		
+	<select id="refreshData" parameterType="com.zipcode.ZipCodeVO" resultType="map">
+		SELECT address, zipcode
+		FROM zip_code
+		WHERE 1=1
+		<if test="zdo!=null and zdo.length()>0">
+			AND zdo = #{zdo}
+		</if>
+		<if test="dong!=null and dong.length()>0">
+			AND dong LIKE '%'||#{dong}||'%'
+		</if>
+	</select>
+	
+</mapper>
