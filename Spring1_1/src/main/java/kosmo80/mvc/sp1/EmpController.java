@@ -1,5 +1,6 @@
 package kosmo80.mvc.sp1;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -38,6 +39,20 @@ public class EmpController extends MultiActionController {
 		mav.addObject("empList", empList);
 		mav.setViewName("di/getEmpList");
 		return mav;
+	}
+	
+	public void getEmpList2(HttpServletRequest req, HttpServletResponse res) {
+		List<Map<String,Object>> empList = new ArrayList<>();
+		Map<String,Object> rmap = new HashMap<>();
+		rmap.put("mem_name", "이순신장군");
+		empList.add(rmap);
+		empList = empLogic.getEmpList();
+		req.setAttribute("empList", empList);
+		try {
+			res.sendRedirect("getEmpList2.jsp");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public ModelAndView empInsert(HttpServletRequest req, HttpServletResponse res) {

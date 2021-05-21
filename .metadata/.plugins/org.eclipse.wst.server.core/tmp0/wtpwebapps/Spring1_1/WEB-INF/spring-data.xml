@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<!-- 원시적 방법 -->
+	<!-- 원시적 방법 : 오라클과 커넥션-->
 	<bean id="data-source-target" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName">
 			<value>oracle.jdbc.driver.OracleDriver</value>

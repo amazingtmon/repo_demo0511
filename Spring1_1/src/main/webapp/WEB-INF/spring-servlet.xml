@@ -9,6 +9,7 @@
 	
 	<bean id="emp-controller" class="kosmo80.mvc.sp1.EmpController">
 		<property name="methodNameResolver" ref="emp-resolver" />
+		<property name="empLogic" ref="emp-logic"/>
 	</bean>
 	<bean id="url-mapping" 
 	class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" >
@@ -17,6 +18,7 @@
 			<!-- <props> = properties와 같다. -->
 			<props>
 				<prop key="/di/getEmpList.sp1">emp-controller</prop>
+				<prop key="/di/getEmpList2.sp1">emp-controller</prop>
 				<prop key="/di/empInsert.sp1">emp-controller</prop>
 				<prop key="/di/empUpdate.sp1">emp-controller</prop>
 				<prop key="/di/empDelete.sp1">emp-controller</prop>
@@ -28,6 +30,7 @@
 		<property name="mappings">
 			<props>
 				<prop key="/di/getEmpList.sp1">getEmpList</prop>
+				<prop key="/di/getEmpList2.sp1">getEmpList2</prop>
 				<prop key="/di/empInsert.sp1">empInsert</prop>
 				<prop key="/di/empUpdate.sp1">empUpdate</prop>
 				<prop key="/di/empDelete.sp1">empDelete</prop>

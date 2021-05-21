@@ -2816,3 +2816,81 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 12:07:43.403
 !MESSAGE executing callback sts4.classpath.QBDrJgqt SUCCESS [done]
+
+!ENTRY org.eclipse.jface 2 0 2021-05-21 15:38:06.027
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-05-21 15:38:06.027
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@501f9b6d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d3fa68a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:11.407
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:11.408
+!MESSAGE classpath=70 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:11.409
+!MESSAGE buffering callback sts4.classpath.QBDrJgqt Spring1_1 false 53
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:11.409
+!MESSAGE executing callback sts4.classpath.QBDrJgqt 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:11.419
+!MESSAGE executing callback sts4.classpath.QBDrJgqt SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:20.373
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:20.374
+!MESSAGE classpath=71 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:20.376
+!MESSAGE buffering callback sts4.classpath.QBDrJgqt Spring1_1 false 54
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:20.376
+!MESSAGE executing callback sts4.classpath.QBDrJgqt 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:20.404
+!MESSAGE executing callback sts4.classpath.QBDrJgqt SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:41.062
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:41.063
+!MESSAGE classpath=73 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:41.064
+!MESSAGE buffering callback sts4.classpath.QBDrJgqt Spring1_1 false 54
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:41.064
+!MESSAGE executing callback sts4.classpath.QBDrJgqt 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 16:12:41.071
+!MESSAGE executing callback sts4.classpath.QBDrJgqt SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 18:16:43.572
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.QBDrJgqt
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 18:16:43.573
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.QBDrJgqt
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 18:16:43.573
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-21 18:16:43.573
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.QBDrJgqt => OK

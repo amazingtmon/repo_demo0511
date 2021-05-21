@@ -1,0 +1,18 @@
+package kosmo80.mvc.sp1;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
+import org.mybatis.spring.SqlSessionTemplate;
+
+public class EmpDao {
+	Logger logger = Logger.getLogger(EmpDao.class);
+	private SqlSessionTemplate sqlSessionTemplate = null;
+	public List<Map<String, Object>> getEmpList() {
+		logger.info("getEmpList 호출성공!!");
+		List<Map<String, Object>> empList = null;
+		return empList;
+	}
+	
+}
