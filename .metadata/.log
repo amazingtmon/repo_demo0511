@@ -3108,3 +3108,15 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY org.eclipse.ui 2 2 2021-05-25 09:45:10.551
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-25 18:34:56.661
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ePxpsPJh
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-25 18:34:56.662
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.ePxpsPJh
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-25 18:34:56.662
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-25 18:34:56.662
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ePxpsPJh => OK
