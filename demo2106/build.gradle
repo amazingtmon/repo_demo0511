@@ -1,0 +1,45 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.8-SNAPSHOT'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+	maven { url 'https://repo.spring.io/snapshot' }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.6'
+		
+	//providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
+	implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.4'
+	// https://mvnrepository.com/artifact/com.zaxxer/HikariCP
+	implementation group: 'com.zaxxer', name: 'HikariCP', version: '3.4.5'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.4.7'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-log4j2
+	//implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '2.4.7'
+	// https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12
+	testImplementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.31'
+	
+	//gradle 방식을 사용할때 필요함.
+	compile fileTree(dir: '/src/main/webapp/WEB-INF/lib', includes:['*.jar'])	
+	compile('org.apache.tomcat.embed:tomcat-embed-jasper')
+	compile('javax.servlet:jstl:1.2')
+}
+
+test {
+	useJUnitPlatform()
+}

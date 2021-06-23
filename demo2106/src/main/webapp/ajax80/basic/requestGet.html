@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let xhrObject = null;
+    function createRequest(){
+      try{
+        xhrObject = new XMLHttpRequest();//비동기 통신 객체 인스턴스화
+      } catch(trymicrosoft){
+
+      }
+      if(xhrObject = null){
+        alert("비동기 통신 객체 생성 에러...")
+      }
+    }
+    function startMethod(){
+      createRequest();
+      xhrObject.open("GET","requestGet.xml",true);
+      xhrObject.onreadystatechange = basic_process;//콜백함수 지정
+      xhrObject.send(null);
+    }
+    function basic_process(){
+      if(xhrObject.readystate == 4){
+        if(xhrObject.status == 200){
+          document.getElementById("d_xml").innerHTML = xhrObject.responseText;
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="d_xml"></div>
+  <button onclick="startMethod()">send</button>
+</body>
+</html>
