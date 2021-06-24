@@ -9,3 +9,8 @@
 	String test = gson.toJson(cusList);
 	out.print(test);
 %>
+<div>
+	<h1>力格</h1>
+	<span>力格捞 公均捞衬</span>
+	<h2><%=test%></h2>
+</div>
