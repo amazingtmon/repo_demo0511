@@ -14,8 +14,8 @@ public class MemberDao {
 	
 	public String login(Map<String, Object> pmap) {
 		String s_name = null;
-		pmap.put("mem_id", "pumpkin");
-		pmap.put("mem_pw", "123");
+//		pmap.put("mem_id", "pumpkin");
+//		pmap.put("mem_pw", "123");
 		sqlSessionTemplate.selectOne(NAMESPACE+"proc_login", pmap);
 		System.out.println("msg: "+pmap.get("mem_id"));
 		s_name = (String) pmap.get("mem_id".toString());
