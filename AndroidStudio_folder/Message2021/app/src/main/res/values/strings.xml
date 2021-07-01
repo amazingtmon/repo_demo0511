@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Message2021</string>
+    <string name="hint">type your text</string>
+    <string name="send">send</string>
+</resources>

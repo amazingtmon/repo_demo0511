@@ -37,6 +37,24 @@ public class RestMemberController {
 		List<MemberVO> list = new ArrayList<>();
 		MemberVO mvo = new MemberVO();
 		mvo.setMem_name(s_name);
+		//mvo.setMem_id(pmap.get("mem_id").toString());
+		list.add(mvo);
+		
+		Gson gson = new Gson();
+		String imsi = gson.toJson(list);
+		return imsi;
+	}
+	
+	@PostMapping("/postLogin")
+	public String postLogin(HttpServletRequest req, @RequestParam Map<String, Object> pmap) {
+		HttpSession session = req.getSession();
+		String s_name = null;
+		s_name = memberLogic.login(pmap);
+		session.setAttribute("s_name", s_name);
+		
+		List<MemberVO> list = new ArrayList<>();
+		MemberVO mvo = new MemberVO();
+		mvo.setMem_name(s_name);
 		mvo.setMem_id(pmap.get("mem_id").toString());
 		
 		Gson gson = new Gson();

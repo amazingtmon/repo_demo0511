@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<!--
+    orderIncategory: 앱바가 여러 액션을 포함할 경우, 액션이 나타나는 순번.
+    ifRoom : 앱바에 공간이 있을 때만 메인영역에 표시
+    withText : 항목의 제목 텍스트를 포함
+    naver : 앱바 메인에 절대 표시 않기
+    always: 항상 항목을 앱바의 메인영역에 표시
+ -->
+    <item
+        android:id="@+id/create_order"
+        android:title="주문하기"
+        android:icon="@drawable/ic_add_white_24dp"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="1"
+        />
+    <item
+        android:id="@+id/action_share"
+        android:title="Share"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="2"
+        app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"
+        />
+</menu>
