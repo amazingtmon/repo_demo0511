@@ -7,10 +7,14 @@
 <title>Dom Out</title>
 </head>
 <body>
+	
+	<header>
+	
+	</header>
 	<div id="d_out"></div>
 	
 	<script>
-		window.onload = function(){
+/* 		window.onload = function(){
 			let output = 
 				`<ul>
 					<li>Java</li>
@@ -19,7 +23,7 @@
 				</ul>`
 		const d_out = document.querySelector('#d_out');
 		d_out.innerHTML = output;
-		}
+		} */
 	</script>
 </body>
 </html>
