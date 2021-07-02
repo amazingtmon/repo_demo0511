@@ -3922,3 +3922,4 @@ org.eclipse.core.runtime.CoreException: Launch configuration DuckSimulation refe
 2021-07-01 09:15:58,750 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-07-01 09:15:58,750 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2021-07-01 09:15:58,750 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\workspace_spring\demo0511-1\src\test\resources
+2021-07-02 10:49:28,338 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
