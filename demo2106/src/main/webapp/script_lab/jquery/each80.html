@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery each</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        let arr1 = [
+          { name: "naver", link: "naver.com" },
+          { name: "google", link: "google.com" },
+          { name: "kakao", link: "kakao.com" },
+        ];
+
+        $.each(arr1, function (index, item) {
+          let output = `<h1>${item.name}</h1>`;
+          console.log(output);
+          document.body.innerHTML += output;
+        });
+      });
+    </script>
+  </body>
+</html>

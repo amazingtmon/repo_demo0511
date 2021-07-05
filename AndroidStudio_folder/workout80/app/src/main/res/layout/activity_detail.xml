@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 마치 레이아웃이 한개의 프래그먼트만 포함하는 것처럼 레이아웃에 프래그먼트를 추가가능함. -->
-<fragment
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:name="com.example.workout80.WorkoutDetailFragment"
-    android:id="@+id/detail"
+    android:id="@+id/detail_frag"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+</fragment>
