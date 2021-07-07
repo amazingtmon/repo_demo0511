@@ -10,16 +10,47 @@ pageEncoding="UTF-8"%>
     	function imgAreaError(){
     		$("#imgViewArea").css({'display': 'none'});$
     	}
+    	
+    	function bookSearch(){
+    		console.log('key');
+    		let word = $("#b_title");
+    		let param = word.val();
+	         let urlApi =
+	           "http://book.interpark.com/api/search.api?"
+	        		   +"key=A0C5D742FAE5C3A0D18BD4DFE8E00E336F4873DCF0A18D39C2C5A29920C4C91D&query="+param+"&output=json";
+    		console.log(param);
+    		console.log(urlApi);
+    		
+    		$.ajax({
+            type: "get",
+            url: urlApi,
+            dataType: "json",
+            success: function (result) {
+                let imsi = JSON.stringify(result);
+                let book_list = JSON.parse(imsi).item;
+            	console.log(book_list);
+            	$("#d_result").css("border","black 1px solid");
+            	$("#d_result").css("backgroundcolor","blue");
+            	$("#d_result").css("top",$("#b_title").offset().top+$("#b_title").offset().height+"px");
+            	$("#d_result").css("left",$("#b_title").offset().left+"px");
+            	let input;
+            	for(i=0; i<book_list.length; i++){
+            		let title = book_list[i].title;
+            		console.log(title);
+            		input += "<h5>"+title+"</h5>";
+            	}
+            	$("#d_result").html(input);
+            },
+    		});
+    	}
     
     </script>
   </head>
   <body>
     [[parsing test]]
     <script type="text/javascript">
-         let urlApi =
-           "http://book.interpark.com/api/search.api?key=A0C5D742FAE5C3A0D18BD4DFE8E00E336F4873DCF0A18D39C2C5A29920C4C91D&query=안드로이드&output=json";
 
-         $.ajax({
+/*          $.ajax({
            type: "get",
            url: urlApi,
            dataType: "json",
@@ -43,8 +74,9 @@ pageEncoding="UTF-8"%>
            error: function (xhrObject) {
              $("#d_result").text(xhrObject.responseText);
            },
-         });
+         }); */
     </script>
+    <input type="text" id="b_title" name="b_title" size=25 onkeyup="bookSearch()" />
     <div id="d_result"></div>
   </body>
 </html>
