@@ -36,7 +36,6 @@ pageEncoding="UTF-8"%>
             	let input;
             	for(i=0; i<book_list.length; i++){
             		let title = book_list[i].title;
-            		console.log(title);
             		input += "<h5>"+title+"</h5>";
             	}
             	$("#d_result").html(input);

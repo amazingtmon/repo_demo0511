@@ -1,0 +1,2 @@
+rootProject.name = "FCMpushnotice801"
+include ':app'
