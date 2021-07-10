@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val bookService = retrofit.create(BookService::class.java)
 
-        bookService.getBestSellerBooks("")
+        bookService.getBestSellerBooks("A0C5D742FAE5C3A0D18BD4DFE8E00E336F4873DCF0A18D39C2C5A29920C4C91D")
             .enqueue(object: Callback<BestSellerDTO> {
                 override fun onResponse(
                     call: Call<BestSellerDTO>,
