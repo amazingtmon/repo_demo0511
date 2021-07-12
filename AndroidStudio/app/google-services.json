@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "786653000651",
+    "project_id": "ktnds-ysc",
+    "storage_bucket": "ktnds-ysc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786653000651:android:b1f1dec4f3db08000a3c4e",
+        "android_client_info": {
+          "package_name": "com.example.ktproject80_login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786653000651-t2hpunslq6bh44gjp1tkkv6vjp491fua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwRuBF713PXTA73syYyONX63L6XgxsYdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786653000651-t2hpunslq6bh44gjp1tkkv6vjp491fua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
