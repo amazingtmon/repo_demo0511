@@ -1,5 +1,6 @@
 commentBorder=\#8000ff | null | false | false | false | false
 commentText=\#a346ff | null | false | false | false | false
 eclipse.preferences.version=1
+newFileTemplateName=xml declaration
 org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart.lastActivePage=1
 tagBorder=\#ffff00 | null | true | false | false | false
