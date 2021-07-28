@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.WebMvcConfigurer"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.EnableWebMvc"/>
-    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.ViewResolverRegistry"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="com.example.demo.HelloController"/>
+    <fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
+    <fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.WebMvcConfigurer"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.ViewResolverRegistry"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.view.InternalResourceViewResolver"/>
+    <fullyQualifiedTypeName name="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
 </qualifiedTypeNameHistroy>

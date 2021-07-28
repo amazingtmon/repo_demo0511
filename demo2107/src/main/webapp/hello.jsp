@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Hello</title>
+<title>Hello - webapp</title>
 </head>
 <body>
 	인사말 : ${greeting}
