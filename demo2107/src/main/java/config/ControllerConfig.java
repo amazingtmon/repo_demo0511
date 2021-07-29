@@ -16,5 +16,4 @@ public class ControllerConfig {
 		helloController.setHelloLogic(helloLogic);
 		return helloController;
 	}
-	
 }
