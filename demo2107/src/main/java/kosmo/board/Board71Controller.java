@@ -48,7 +48,7 @@ public class Board71Controller {
 			return "board/getBoardList";
 		}
 		
-		public ModelAndView getBoardDetail(Model model, @RequestParam Map<String,Object> pmap) {
+		public String getBoardDetail(Model model, @RequestParam Map<String,Object> pmap) {
 			logger.info("getBoardList 호출 성공");
 			pmap.put("gubun", "detail");
 			logger.info("bm_no : "+pmap.get("bm_no"));
@@ -74,20 +74,20 @@ public class Board71Controller {
 		}
 		
 		
-		public void boardUpdate(HttpServletRequest req, HttpServletResponse res) 
+		public String boardUpdate(@RequestParam Map<String,Object> pmap) 
 				throws Exception
 		{
 			logger.info("boardUpdate 호출 성공");
-			HashMapBinder hmb = new HashMapBinder(req);
-			Map<String, Object> pmap = new HashMap<>();
-			hmb.bindPost(pmap);
+			String path ="";
 			int result = 0;
 			result = board71Logic.boardUpdate(pmap);
 			if(result == 1) {
-				res.sendRedirect("./getBoardList.sp4");
+				path = "redirect:./getBoardList.sp4";
 			} else {
-				res.sendRedirect("./getFail.sp4");
+				path = "redirect:./getFail.jsp";
 			}
+			
+			return path;
 		}
 		
 		public ModelAndView updateForm(HttpServletRequest req, HttpServletResponse res) 
@@ -104,31 +104,30 @@ public class Board71Controller {
 			return mav;
 		}	
 
-		public void boardInsert(HttpServletRequest req, HttpServletResponse res) throws Exception {
+		public String boardInsert(@RequestParam Map<String,Object> pmap) throws Exception {
 			logger.info("boardInsert 호출 성공");
-			HashMapBinder hmb = new HashMapBinder(req);
-			Map<String, Object> pmap = new HashMap<>();
-			hmb.multiBind(pmap);
+			String path = "";
 			int result = 0;
 			result = board71Logic.boardInsert(pmap);
 			if(result == 1) {
-				res.sendRedirect("./getBoardList.sp4");
+				
+				path = "redirect:./getBoardList.sp4";
 			} else {
-				res.sendRedirect("./getFail.sp4");
+				path = "redirect:./getFail.jsp";
 			}
+			
+			return path;
 		}
 		
-		public void boardDelete(HttpServletRequest req, HttpServletResponse res) throws Exception {
+		public void boardDelete(@RequestParam Map<String,Object> pmap) throws Exception {
 			logger.info("boardDelete 호출 성공");
-			HashMapBinder hmb = new HashMapBinder(req);
-			Map<String, Object> pmap = new HashMap<>();
-			hmb.bindPost(pmap);
+			String path = "";
 			int result = 0;
 			result = board71Logic.boardDelete(pmap);
 			if(result == 1) {
-				res.sendRedirect("./getBoardList.sp4");
+				path = "redirect:./getBoardList.sp4";
 			} else {
-				res.sendRedirect("./getFail.sp4");
+				path = "redirect:./getFail.jsp";
 			}
 		}
 }

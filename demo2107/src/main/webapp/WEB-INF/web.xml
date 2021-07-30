@@ -33,6 +33,7 @@
 				config.MvcConfig
 				config.ControllerConfig
 				config.HttpInterceptor
+				config.ServletConfig
 			</param-value>
 		</init-param>
 	</servlet>
