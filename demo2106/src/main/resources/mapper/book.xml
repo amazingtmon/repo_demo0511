@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.example.ajax">
+	<select id="getBookList" parameterType="map" resultType="map">
+		SELECT book_no, book_title, book_img, book_author
+			   , book_publish, book_date, book_price
+		FROM ajax_book	
+		<where>
+			<if test='book_title !=null abd chomode.equals("N")'>
+				<![CDATA[ AND book_title LIKE '%'||#{book_title}||'%']]>
+			</if>
+			<if test='book_title !=null abd chomode.equals("Y")'>
+				<![CDATA[ AND fn_korinitialkeyword(book_title) LIKE '%'||#{book_title}||'%']]>
+			</if>
+		</where>
+		ORDER BY book_title asc   	
+	</select>
+</mapper>
